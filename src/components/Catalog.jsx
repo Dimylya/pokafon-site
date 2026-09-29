@@ -1,15 +1,16 @@
 import { useState } from "react";
 import './Catalog.css';
-import mobil1 from './assets/mobile1.jpg'
-import laptop1 from './assets/laptop1.png'
-import hear from './assets/hear.jpg'
-import TV from './assets/TV1.jpg'
-import ps5 from './assets/ps5.jpg'
-import ipadPro from './assets/ipad_pro.jpg'
-import palesos from './assets/robot_sosi.jpg'
-import foto from './assets/fotoaparat.jpg'
-import appleWatch from './assets/apple_watch.jpg'
-import oralB from './assets/oral-B.jpg'
+import mobil1 from '../assets/mobile1.jpg'
+import laptop1 from '../assets/laptop1.png'
+import hear from '../assets/hear.jpg'
+import TV from '../assets/TV1.jpg'
+import ps5 from '../assets/ps5.jpg'
+import ipadPro from '../assets/ipad_pro.jpg'
+import palesos from '../assets/robot_sosi.jpg'
+import foto from '../assets/fotoaparat.jpg'
+import appleWatch from '../assets/apple_watch.jpg'
+import oralB from '../assets/oral-B.jpg'
+import Card from "./Card";
 
 const electronicsCatalog = [
   {
@@ -97,25 +98,15 @@ const electronicsCatalog = [
 function Catalog (){
 
     const [catalog, setCatalog] = useState(electronicsCatalog);
-    
+    const [search, setSearch] = useState('');
+
     return (
         <>
             <h2 className="catalog-h2">Полный каталог</h2>
-            <input className="catalog-search" type="text" placeholder="Введите название товара" />
+            <input className="catalog-search" type="text" placeholder="Введите название товара" value={search} onChange={(e)=>{setSearch(e.target.value);}} />
             <div className="catalog-container">
                 {catalog.map((e)=>{
-                    return(
-                        <div key={e.id} className="catalog-card">
-                            <div className="catalog-card-img">
-                                <img src={e.img} alt="" />
-                            </div>
-                            <h4 className="catalog-card-name">{e.name}</h4>
-                            <p className="catalog-card-description">{e.description} </p>
-                            <hr />
-                            <p className="catalog-card-price">Цена: {e.price} рублей </p>
-                            <p className="catalog-card-quantity">Количество: {e.quantity} </p>
-                        </div>
-                    )
+                    return <Card item = {e}/>
                 })}
             </div>
         </>

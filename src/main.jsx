@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Route, Routes, NavLink } from "react-router";
 import './index.css'
 import App from './App.jsx'
-import Catalog from './catalog.jsx';
+import Catalog from './components/Catalog.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
