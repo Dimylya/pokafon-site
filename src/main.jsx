@@ -18,5 +18,8 @@ createRoot(document.getElementById('root')).render(
       <Route path="/" element={<App />} />
       <Route path='/catalog' element={<Catalog />} />
     </Routes>
+    <footer>
+      <p>&copy; PoKaFoN Все права защищены</p>
+    </footer>
   </BrowserRouter>,
 )

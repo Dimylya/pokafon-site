@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './Catalog.css';
 import mobil1 from '../assets/mobile1.jpg'
 import laptop1 from '../assets/laptop1.png'
@@ -11,6 +11,7 @@ import foto from '../assets/fotoaparat.jpg'
 import appleWatch from '../assets/apple_watch.jpg'
 import oralB from '../assets/oral-B.jpg'
 import Card from "./Card";
+import Delay from "../api/Delay";
 
 const electronicsCatalog = [
   {
@@ -99,13 +100,29 @@ function Catalog (){
 
     const [catalog, setCatalog] = useState(electronicsCatalog);
     const [search, setSearch] = useState('');
+    const [isLoading, setIsLoading] = useState(true)
+    useEffect(()=>{
+      async function load() {
+        setIsLoading(true);
+        const result = await Delay();
+        setIsLoading(result)
+      }
 
+      load();
+    },[])
+    function poisk (){
+      if (!search) return catalog;
+      return catalog.filter((e)=> e.name.toLowerCase().includes(search.toLowerCase()));
+    }
+
+    if (isLoading) return <p>Загрузка</p>
+    
     return (
         <>
             <h2 className="catalog-h2">Полный каталог</h2>
             <input className="catalog-search" type="text" placeholder="Введите название товара" value={search} onChange={(e)=>{setSearch(e.target.value);}} />
             <div className="catalog-container">
-                {catalog.map((e)=>{
+                {poisk().map((e)=>{
                     return <Card item = {e}/>
                 })}
             </div>
