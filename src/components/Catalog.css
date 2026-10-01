@@ -8,13 +8,23 @@
     
 }
 
-.catalog-search{
+.catalog-search-dark{
     margin: 20px auto;
     width: 500px;
     color: #9c27b0;
+    
 }
-input::placeholder{
+
+.catalog-search-light{
+    margin: 20px auto;
+    width: 500px;
+    color: #000;
+}
+
+.catalog-search-dark::placeholder{
     color: #9c27b0;
 }
 
-
+.catalog-search-light::placeholder{
+    color: #000;
+}

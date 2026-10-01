@@ -1,18 +1,20 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import Delay from './api/Delay'
+import { ThemeContext } from './context/theme'
 
 function App() {
+  const themeContext = useContext(ThemeContext)
   const [count, setCount] = useState(0)
   const [isLoading, setIsLoading] = useState(true)
     useEffect(()=>{
       async function load() {
         setIsLoading(true);
         const result = await Delay();
-        setIsLoading(result)
+        setIsLoading(false)
       }
 
       load();
