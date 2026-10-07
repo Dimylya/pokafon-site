@@ -1,3 +1,7 @@
+*{
+  transition: background-color 0.555s, color 0.444s;
+}
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -178,34 +182,37 @@ code {
 }
 
 .btn-themeSwitcher-dark{
-  background-color: #9c27b0;
+  background-color: #f0c3f8;
   border: 1px solid #d81b60;
   border-radius: 10px;
   width: 90px;
   height: 30px;
-  color: #08060d;
+  color: #000;
   font-size: 16px;
   transition: 0.333s;
 }
 
 .btn-themeSwitcher-dark:hover{
+  box-shadow: 4px 3px 4px 2px #fff;
   scale: 1.1;
 }
 
 .btn-themeSwitcher-light{
-  background-color: #9c27b0;
-  border: 1px solid #d81b60;
+  background-color: #16051a;
+  border: 1px solid #3f0e20;
   border-radius: 10px;
   width: 90px;
   height: 30px;
-  color: #08060d;
+  color: #fff;
   font-size: 16px;
   transition: 0.333s;
 }
 
 .btn-themeSwitcher-light:hover{
-    scale: 1.1;
-  }
+  box-shadow: 4px 3px 4px 2px #000;
+  scale: 1.1;
+}
+
 
 .body-dark{
   background-color:#16171d ;

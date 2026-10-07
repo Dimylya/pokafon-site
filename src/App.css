@@ -1,3 +1,7 @@
+h2{
+  transition: color 0.333s;
+}
+
 .main-h2-dark{
   color: #fff;
 }

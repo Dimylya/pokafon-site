@@ -22,7 +22,7 @@
 }
 
 .catalog-card-dark:hover{
-    box-shadow: 10px 8px 10px 6px white;
+    box-shadow: 10px 8px 10px 6px #fff;
     scale: 1.05;
 }
 
