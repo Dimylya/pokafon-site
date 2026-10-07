@@ -19,6 +19,7 @@
     margin: 20px auto;
     width: 500px;
     color: #000;
+    background-color: #fff;
 }
 
 .catalog-search-dark::placeholder{
@@ -26,5 +27,13 @@
 }
 
 .catalog-search-light::placeholder{
+    color: #000;
+}
+
+.catalog-h2-dark{
+    color: #fff;
+}
+
+.catalog-h2-light{
     color: #000;
 }

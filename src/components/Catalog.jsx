@@ -26,11 +26,11 @@ function Catalog (){
       return catalog.filter((e)=> e.name.toLowerCase().includes(search.toLowerCase()));
     }
     console.log(theme)
-    if (isLoading) return <p>Загрузка</p>
+    if (isLoading) return <p className={`isLoading-${theme.currentTheme}`}>Загрузка</p>
     
     return (
         <>
-            <h2 className={`catalog-h2`}>Полный каталог</h2>
+            <h2 className={`catalog-h2-${theme.currentTheme}`}>Полный каталог</h2>
             <input className={`catalog-search-${theme.currentTheme}`} type="text" placeholder="Введите название товара" value={search} onChange={(e)=>{setSearch(e.target.value);}} />
             <div className="catalog-container">
                 {poisk().map((e)=>{

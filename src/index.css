@@ -143,9 +143,9 @@ code {
   align-items: center;
   justify-content: space-between;
   padding: 0px 20px;
-  border-bottom: 1px solid #f8f9fa;
+  border-bottom: 1px solid #000;
   h1{
-    background-image: linear-gradient(135deg, #f0f0f0, #e0e0e0, #d0d0d0, #c0c0c0);
+    background-image: linear-gradient(135deg, #ff4b5c, #d81b60, #9c27b0, #673ab7);
     color: transparent;
     background-clip: text;
     line-height: 1.1;
@@ -175,4 +175,50 @@ code {
 .footer-light{
   margin-top: auto;
   color: black;
+}
+
+.btn-themeSwitcher-dark{
+  background-color: #9c27b0;
+  border: 1px solid #d81b60;
+  border-radius: 10px;
+  width: 90px;
+  height: 30px;
+  color: #08060d;
+  font-size: 16px;
+  transition: 0.333s;
+}
+
+.btn-themeSwitcher-dark:hover{
+  scale: 1.1;
+}
+
+.btn-themeSwitcher-light{
+  background-color: #9c27b0;
+  border: 1px solid #d81b60;
+  border-radius: 10px;
+  width: 90px;
+  height: 30px;
+  color: #08060d;
+  font-size: 16px;
+  transition: 0.333s;
+}
+
+.btn-themeSwitcher-light:hover{
+    scale: 1.1;
+  }
+
+.body-dark{
+  background-color:#16171d ;
+}
+
+.body-light{
+  background-color: #fff;
+}
+
+.isLoading-dark{
+  color: #fff;
+}
+
+.isLoading-light{
+  color: #000;
 }

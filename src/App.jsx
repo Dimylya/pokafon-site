@@ -10,6 +10,7 @@ function App() {
   const themeContext = useContext(ThemeContext)
   const [count, setCount] = useState(0)
   const [isLoading, setIsLoading] = useState(true)
+  const theme = useContext(ThemeContext)
     useEffect(()=>{
       async function load() {
         setIsLoading(true);
@@ -20,11 +21,11 @@ function App() {
       load();
     },[])
 
-    if(isLoading) return <p>Загрузка</p>
+    if(isLoading) return <p className={`isLoading-${theme.currentTheme}`}>Загрузка</p>
   return (
     <>
 
-      <h2>Это будет главная сраница тут чет будет наверное </h2>
+      <h2 className={`main-h2-${theme.currentTheme}`}>Это будет главная сраница тут чет будет наверное </h2>
 
       {/* <section id="center">
         <div className="hero">

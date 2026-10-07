@@ -6,8 +6,8 @@ export function ThemeSwitcher(){
 
     return(
         <>
-        {currentTheme != "dark" &&<button onClick={(e)=>setCurrentTheme('dark')}>dark</button>}
-        {currentTheme != "light" &&<button onClick={(e)=>setCurrentTheme('light')}>light</button>}
+        {currentTheme != "dark" &&<button className={`btn-themeSwitcher-${currentTheme}`} onClick={(e)=>setCurrentTheme('dark')}>dark</button>}
+        {currentTheme != "light" &&<button className={`btn-themeSwitcher-${currentTheme}`} onClick={(e)=>setCurrentTheme('light')}>light</button>}
         </>
     )
 }
